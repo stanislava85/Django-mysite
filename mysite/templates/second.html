@@ -1,0 +1,14 @@
+
+<!-- mysite/templates/index.html -->
+
+{% extends "base.html" %}
+
+{% block title %}index page{% endblock %}
+
+{% block content %}
+  <h1>Models Information</h1>
+  {% for movie in movies %}
+    <ul>{{ movie.person.first_name }} owns {{ movie.title }} </ul>
+  {% endfor %}
+
+{% endblock %}
